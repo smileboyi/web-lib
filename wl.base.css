@@ -1,12 +1,12 @@
 img{border:none;max-width:100%;vertical-align:middle;}
-body,p,form,input,button,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6{margin:0;padding:0;list-style:none;overflow-x:hidden}
+body,p,form,input,button,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6{margin:0;padding:0;list-style:none;overflox:hidden}
 h1,h2,h3,h4,h5,h6{font-size:100%;}
 input,textarea{-webkit-user-select:text;-ms-user-select:text;user-select:text;-webkit-appearance:none;}
 table{border-collapse:collapse;}
 input,select,textarea{outline:none;border:none;background:none;}
 a:link,a:active{text-decoration:none;}
 a:visited{text-decoration:none;}
-a{text-decoration:none;-webkit-touch-callout:none;}
+a{text-decoration:none;}
 em,i{font-style:normal;}
 li,ol{list-style:none;}
 
@@ -25,70 +25,90 @@ input::-webkit-inner-spin-button{
     margin: 0; 
 }
 /* 其他样式 */
-html{height: 100%;}
+html{height: 100%;-webkit-transition:font-size 0.2s ease-out;}
 body{width: 100%;min-height: 100%;}
 html::-webkit-scrollbar{display: none;}
 div,span,a,img{-webkit-user-select: none;-moz-user-select: none;}
 a,img{-webkit-touch-callout: none;}
-body{-webkit-overflow-scrolling: touch;overflow-scrolling: touch;line-height: 1.6;font-family: -apple-system-font,Helvetica Neue,sans-serif}
+body{-webkit-overfloscrolling: touch;line-height: 1.6;font-family: -apple-system-font,Helvetica Neue,sans-serif}
 /****** 新增重置样式 end ********/
 
+/* 字根屏幕适配，移动端可以换成flexible.js */
+@media (max-width: 1200px) {html {font-size: 36px;}}
+@media (max-width: 1100px) {html {font-size: 33px;}}
+@media (max-width: 1000px) {html {font-size: 30px;}}
+@media (max-width: 900px) {html {font-size: 27px;}}
+@media (max-width: 800px) {html {font-size: 24px;}}
+@media (max-width: 700px) {html {font-size: 21px;}}
+@media (max-width: 600px) {html {font-size: 18px;}}
+@media (max-width: 500px) {html {font-size: 15px;}}
+@media (max-width: 400px) {html {font-size: 12px;}}
+
 /**********面向属性的css begin**********/
-.w-bsb{
+.bsb{
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.w-pab{
+.pab{
 	position: absolute;
 }
-.w-pre{
+.pre{
 	position: relative;
 }
-.w-pfi{
+.pfi{
 	position: fixed;
 }
-.w-not{
+.not{
 	top:0;
 }
-.w-nob{
+.nob{
 	bottom:0;
 }
-.w-nol{
+.nol{
 	left:0;
 }
-.w-nor{
+.nor{
 	right:0;
 }
 /* 去掉伪元素，一般伪元素都会设置display，
 所以要加上!important后缀。不然会失效。 */
-.w-noaf:after{
+.noaf:after{
 	display: none !important;
 }
-.w-nobe:before{
+.nobe:before{
 	display: none !important;
 }
-/* 块状元素水平居中 */
-.w-wauto{
+/* 元素水平居中 */
+.wauto{
+	/* 块级元素 */
 	margin-right: auto;
 	margin-left: auto;
 }
-.w-wauto2{
+.wauto2{
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
+.wauto3{
+	-webkit-justify-content: center; 
+	justify-content: center;
+}
 /* 元素垂直居中 */
-.w-hauto{
+.hauto{
 	display: table-cell;
 	vertical-align: middle;
 }
-.w-hauto2{
+.hauto2{
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
-/* 不定高宽元素水平垂直居中1 */
-.w-centre1{
+.hauto3{
+	-webkit-align-items: center; 
+	align-items: center;
+}
+/* 不定高宽元素水平垂直居中 */
+.centre1{
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -96,202 +116,198 @@ body{-webkit-overflow-scrolling: touch;overflow-scrolling: touch;line-height: 1.
 	top: 0;
 	margin: auto;
 }
-/* 不定高宽元素水平垂直居中2 */
-.w-centre2{
+.centre2{
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
-.w-fl{
+.centre3{
+	-webkit-justify-content: center; 
+	justify-content: center;
+	-webkit-align-items: center; 
+	align-items: center;
+}
+.fl{
 	float: left;
 }
-.w-fr{
+.fr{
 	float: right;
 }
-.w-fn{
+.fn{
 	float: none;
 }
 /* 清除浮动*/
-.w-fix{
+.fix{
 	*zoom:1;
 }
-.w-fix:after{
+.fix:after{
 	display:table;
 	content:'';
 	clear:both;
 }
-.w-dn{
+.dn{
 	display: none;
 }
-.w-db{
+.db{
 	display: block;
 }
-.w-dib{
+.dib{
 	display: inline-block;
 }
 /*没有间隔的inline-block*/
-.w-dib2{
+.dib2{
 	display: inline-block;
 	font-size: 0;
 	letter-spacing: normal;
 	word-spacing: normal;
 	-webkit-text-size-adjust:none;
 }
-.w-dt{
+.dt{
 	display: table;
 }
 /* 横向flex */
-.w-flex{
-	display: -webkit-box;
+.flex{
 	display: -webkit-flex;
 	display: flex;
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
 }
 /* 纵向flex(圣杯) */
-.w-grail{
-	display: -webkit-box;
+.grail{
 	display: -webkit-flex;
 	display: flex;
-	min-height: 100%;
 	flex-direction: column;
 	align-content: space-between;
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
 }
-.w-fe{
+.fe{
 	-webkit-flex: 1;
 	flex: 1;
 }
-.w-20w{
+.w20{
 	width: 20%;
 }
-.w-25w{
+.w25{
 	width: 25%;
 }
-.w-50w{
+.w50{
 	width: 50%;
 }
-.w-75w{
+.w75{
 	width: 75%;
 }
-.w-100w{
+.w100{
 	width: 100%;
 }
-.w-100h{
+.h50{
+	height: 50%;
+}
+.h100{
 	height: 100%;
 }
-.w-100wh{
+.wh100{
 	width: 100%;
 	height: 100%;
 }
-.w-fnm{
+.fnm{
 	font-style:normal; 
 	font-weight:normal; 
 	white-space: normal;
 }
 /* 页面最大和最小宽度 */
-.w-mw{
+.mw{
 	max-width: 750px;
 	min-width: 320px;
 }
-.w-tl{
+.tl{
 	text-align: left;
 }
-.w-tc{
+.tc{
 	text-align: center;
 }
-.w-tr{
+.tr{
 	text-align: right;
 }
-.w-tj{
+.tj{
 	text-align:justify;
 }
 /* 单行文字溢出虚点显示，多行的时候再结合其他样式*/
 /* 因为单元格的流动性，使得文字根本就不存在溢出这种说法，需要结合table-layout: fixed使用 */
-.w-ell{
+.ell{
 	text-overflow:ellipsis;
 	white-space:nowrap;
 	word-wrap: normal;
 	overflow:hidden;
 }
-.w-contain{
+.contain{
 	-webkit-background-size: contain;
 	background-size: contain;
 }
-.w-cover{
+.cover{
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-.w-norp{
+.norp{
 	background-repeat: no-repeat;
 }
 /* 用于隐藏文字，显示图片 */
-.w-notext {
+.notext {
 	text-align: left;
 	letter-spacing: -3em;
 	overflow: hidden;
 }
-.w-notext:first-letter {
+.notext:first-letter {
 	margin-left: -20em;
 }
 /* 针对单个小图标 */
-.w-icon{
+.icon{
 	background-repeat: no-repeat;
 	background-position: center;
-    -webkit-background-size: cover;
-    background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 /* css3过渡动画效果 */
-.w-trans{
+.trans{
 	-webkit-transition:all 0.3s;	
     transition:all 0.3s;
 }
-.w-ovh{
+.ovh{
 	overflow: hidden;
 }
-.w-ovv{
+.ovv{
 	overflow: visible;
 }
-.w-ovs{
+.ovs{
 	overflow: scroll;
 }
-.w-nobd{
+.nobd{
 	border: none;
 }
-.w-bde{
-	border:1px solid #eee;
-}
-.w-bdc{
-	border:1px solid #ccc;
-}
-.w-bdd{
-	border:1px solid #ddd;
-}
-.w-z10{
+.z10{
 	z-index: 10;
 }
-.w-z50{
+.z50{
 	z-index: 50;
 }
-.w-z100{
+.z100{
 	z-index: 100;
 }
-.w-z500{
+.z500{
 	z-index: 500;
 }
-.w-z1000{
+.z1000{
 	z-index: 1000;
 }
-.w-tsa{
+.tsa{
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
 }
 /* 一般使用伪类放图标 */
-.w-ai:after,
-.w-bi:before {
+.ai:after,
+.bi:before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -300,95 +316,29 @@ body{-webkit-overflow-scrolling: touch;overflow-scrolling: touch;line-height: 1.
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-.w-bgctp{
+.bgctp{
 	background-color: transparent;
 }
+.bde{
+	border:1px solid #eee;
+}
+.bdc{
+	border:1px solid #ccc;
+}
+.bdd{
+	border:1px solid #ddd;
+}
 
-/* 下面是项目里面公用的颜色，自行添加 */
-/* 公用字体颜色 */
-.w-cor1{
-	color: #fabf13;
-}
-.w-cor2{
-	color: #434343;
-}
-.w-cor3{
-	color: #898989;
-}
-.w-cor4{
-	color: #3f3b3a;
-}
-.w-cor5{
-	color: #969696;
-}
-.w-cor6{
-	color: #fff;
-}
-.w-cor7{
-	color: #3e3a39;
-}
-/* 公用背景颜色 */
-.w-bgc1{
-	background-color: #fabf13;
-}
-.w-bgc2{
-	background-color: #fac018;
-}
-.w-bgc3{
-	background-color: #fac016;
-}
-.w-bgc4{
-	background-color: #eeefef;
-}
-.w-bgc5{
-	background-color: #efefef;
-}
-.w-bgc6{
-	background-color: #f1f1f1;
-}
-.w-bgc7{
-	background-color: #f8b62d;
-}
-.w-bgc8{
-	background-color: #b5b6b6;
-}
-.w-bgc9{
-	background-color: #efeff0;
-}
-.w-bgc10{
-	background-color: #eecc5d;
-}
-.w-bgc11{
-	background-color: #f0cd6a;
-}
-.w-bgc12{
-	background-color: #dcdddd;
-}
-.w-bgc13{
-	background-color: #c30d24;
-}
-.w-bgc14{
-	background-color: #f4c221;
-}
-.w-bgc15{
-	background-color: #fae7a5;
-}
-.w-bgc16{
-	background-color: #c9cacb;
-}
-.w-bgc17{
-	background-color: #ffffff;
-}
-.w-bgc18{
-	background-color: #898989;
-}
-.w-navpad{
-	padding-bottom: 1.8rem;
-}
-.w-btnpad{
-	padding-bottom: 1.6rem;
-}
-.w-btnpad2{
-	padding-bottom: 1.2rem;
-}
+/**
+ *	1、ac代表active(激活),in代表Invalid(失效)。这2个状态class不能单独使用，
+ *	需要配合其他class使用。比如.btn.ac代表按钮点中的状态。
+ *	2、css属性书写顺序:
+ *	影响文档流的属性（比如：display, position, float, clear, visibility, table-layout等） 
+ *	自身盒模型的属性（比如：width, height, margin, padding, border等） 
+ *	排版相关属性（比如：font, line-height, text-align, text-indent, vertical-align等） 
+ *	装饰性属性（比如：color, background, opacity, cursor等） 
+ *	生成内容的属性（比如：content, list-style, quotes等） 
+ *
+ */
+
 /**********面向属性的css begin**********/
