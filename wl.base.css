@@ -332,7 +332,7 @@ body{-webkit-overfloscrolling: touch;line-height: 1.6;font-family: -apple-system
 }
 
 /**
- *	1、ac代表active(激活),in代表Invalid(失效)。这2个状态class不能单独使用，
+ *	1、ac代表active(激活),in代表invalid(失效)。这2个状态class不能单独使用，
  *	需要配合其他class使用。比如.btn.ac代表按钮点中的状态。
  *	2、css属性书写顺序:
  *	影响文档流的属性（比如：display, position, float, clear, visibility, table-layout等） 
@@ -343,4 +343,4 @@ body{-webkit-overfloscrolling: touch;line-height: 1.6;font-family: -apple-system
  *	3.使用BEM命名class
  */
 
-/**********面向属性的css begin**********/
+/**********面向属性的css end**********/
