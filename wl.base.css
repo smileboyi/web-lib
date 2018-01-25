@@ -25,7 +25,7 @@ input::-webkit-inner-spin-button{
     margin: 0; 
 }
 /* 其他样式 */
-html{height: 100%;-webkit-transition:font-size 0.2s ease-out;}
+html{min-height: 100%;-webkit-transition:font-size 0.2s ease-out;}
 body{width: 100%;min-height: 100%;}
 html::-webkit-scrollbar{display: none;}
 div,span,a,img{-webkit-user-select: none;-moz-user-select: none;}
@@ -34,6 +34,8 @@ body{-webkit-overfloscrolling: touch;line-height: 1.6;font-family: -apple-system
 /****** 新增重置样式 end ********/
 
 /* 字根屏幕适配，移动端可以换成flexible.js */
+/* 这里设定限制最大了，如果觉得小了可以去掉往上继续添加 */
+@media (min-width: 1200px) {html {font-size: 36px;}}
 @media (max-width: 1200px) {html {font-size: 36px;}}
 @media (max-width: 1100px) {html {font-size: 33px;}}
 @media (max-width: 1000px) {html {font-size: 30px;}}
@@ -147,9 +149,6 @@ body{-webkit-overfloscrolling: touch;line-height: 1.6;font-family: -apple-system
 	content:'';
 	clear:both;
 }
-.dn{
-	display: none;
-}
 .db{
 	display: block;
 }
@@ -182,6 +181,9 @@ body{-webkit-overfloscrolling: touch;line-height: 1.6;font-family: -apple-system
 	align-content: space-between;
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
+}
+.dn{
+	display: none;
 }
 .fe{
 	-webkit-flex: 1;
@@ -338,7 +340,7 @@ body{-webkit-overfloscrolling: touch;line-height: 1.6;font-family: -apple-system
  *	排版相关属性（比如：font, line-height, text-align, text-indent, vertical-align等） 
  *	装饰性属性（比如：color, background, opacity, cursor等） 
  *	生成内容的属性（比如：content, list-style, quotes等） 
- *
+ *	3.使用BEM命名class
  */
 
 /**********面向属性的css begin**********/
