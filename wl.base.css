@@ -1,3 +1,10 @@
+/*
+ * @Author: smileboyi 
+ * @Date: 2018-04-10 13:43:31 
+ * @Last Modified by: smileboyi
+ * @Last Modified time: 2018-04-10 13:55:49
+ */
+
 img{border:none;max-width:100%;vertical-align:middle;}
 body,p,form,input,button,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6{margin:0;padding:0;list-style:none;overflox:hidden}
 h1,h2,h3,h4,h5,h6{font-size:100%;}
@@ -214,15 +221,60 @@ body{-webkit-overfloscrolling: touch;line-height: 1.6;font-family: -apple-system
 	width: 100%;
 	height: 100%;
 }
+/* 手机页面最大和最小宽度，pc端更多是响应式，就没有 */
+.mw--app{
+	max-width: 750px;
+	min-width: 320px;
+}
+.nom{
+	margin: 0;
+}
+.nomt{
+	margin-top: 0;
+}
+.nomr{
+	margin-right: 0;
+}
+.nomb{
+	margin-bottom: 0;
+}
+.noml{
+	margin-left: 0;
+}
+.nop{
+	padding: 0;
+}
+.nopt{
+	padding-top: 0;
+}
+.nopr{
+	padding-right: 0;
+}
+.nopb{
+	padding-bottom: 0;
+}
+.nopl{
+	padding-left: 0;
+}
 .fnm{
 	font-style:normal; 
 	font-weight:normal; 
 	white-space: normal;
 }
-/* 页面最大和最小宽度 */
-.mw{
-	max-width: 750px;
-	min-width: 320px;
+.fb{
+	font-weight:bold;
+}
+.fi{
+	font-style:italic;
+}
+/* 用于隐藏文字，显示图片 */
+.notext {
+	text-align: left;
+	letter-spacing: -3em;
+	overflow: hidden;
+}
+.notext:first-letter {
+	margin-left: -20em;
 }
 .tl{
 	text-align: left;
@@ -245,36 +297,24 @@ body{-webkit-overfloscrolling: touch;line-height: 1.6;font-family: -apple-system
 	overflow:hidden;
 }
 .contain{
-	-webkit-background-size: contain;
 	background-size: contain;
 }
 .cover{
-	-webkit-background-size: cover;
 	background-size: cover;
 }
 .norp{
 	background-repeat: no-repeat;
 }
-/* 用于隐藏文字，显示图片 */
-.notext {
-	text-align: left;
-	letter-spacing: -3em;
-	overflow: hidden;
-}
-.notext:first-letter {
-	margin-left: -20em;
-}
 /* 针对单个小图标 */
 .icon{
 	background-repeat: no-repeat;
 	background-position: center;
-	-webkit-background-size: cover;
 	background-size: cover;
 }
 /* css3过渡动画效果 */
 .trans{
 	-webkit-transition:all 0.3s;	
-    transition:all 0.3s;
+	transition:all 0.3s;
 }
 .ovh{
 	overflow: hidden;
@@ -315,7 +355,6 @@ body{-webkit-overfloscrolling: touch;line-height: 1.6;font-family: -apple-system
 	position: absolute;
 	background-repeat: no-repeat;
 	background-position: center;
-	-webkit-background-size: cover;
 	background-size: cover;
 }
 .bgctp{
@@ -340,7 +379,8 @@ body{-webkit-overfloscrolling: touch;line-height: 1.6;font-family: -apple-system
  *	排版相关属性（比如：font, line-height, text-align, text-indent, vertical-align等） 
  *	装饰性属性（比如：color, background, opacity, cursor等） 
  *	生成内容的属性（比如：content, list-style, quotes等） 
- *	3.使用BEM命名class
+ *	3、使用BEM命名class
+ *	4、sn1,sn2,sn3等用于序号，在结构不好用nth-child(2)等类似表达时使用，不能单独使用。
  */
 
 /**********面向属性的css end**********/
