@@ -2,7 +2,7 @@
  * @Author: smileboyi 
  * @Date: 2018-04-10 13:43:31 
  * @Last Modified by: smileboyi
- * @Last Modified time: 2018-06-24 23:10:42
+ * @Last Modified time: 2018-08-23 12:54:39
  */
 
 body,p,form,input,button,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6{margin:0;padding:0;list-style:none;overflox:hidden}
@@ -107,11 +107,12 @@ a,img{-webkit-touch-callout: none;}
 	-webkit-justify-content: center; 
 	justify-content: center;
 }
-/* 元素垂直居中 */
+/* 内容垂直居中 */
 .hauto{
 	display: table-cell;
 	vertical-align: middle;
 }
+/* 元素垂直居中 */
 .hauto2{
 	top: 50%;
 	-webkit-transform: translateY(-50%);
@@ -262,8 +263,8 @@ a,img{-webkit-touch-callout: none;}
 	padding-left: 0;
 }
 .fnm{
-	font-style:normal; 
-	font-weight:normal; 
+	font-style:normal;
+	font-weight:normal;
 	white-space: normal;
 }
 .fb{
@@ -324,8 +325,21 @@ a,img{-webkit-touch-callout: none;}
 .norp{
 	background-repeat: no-repeat;
 }
-/* 针对单个小图标（大部分），或者图片 */
+.blurry{
+	color: transparent;
+	text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+/* 针对单个小图标*/
 .icon{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+/* 针对大图片，常用于背景 */
+.bg{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -384,8 +398,7 @@ a,img{-webkit-touch-callout: none;}
 .ai:after,
 .bi:before {
 	content: '';
-	display: block;
-	position: absolute;
+	display: inline-block;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -423,10 +436,27 @@ a,img{-webkit-touch-callout: none;}
 	white-space: pre-wrap;
 	animation: dot 3s infinite step-start both;
 }
+/* 主要用于文字加载 */
+.dot2::after {
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: bottom;
+	animation: dot2 2s infinite;
+	content: "\2026"; /* ascii code for the ellipsis character */
+}
 @keyframes dot{
 	33% { transform: translateY(-2em) }
 	66% { transform: translateY(-1em) }
 }
+@keyframes dot2 {
+	from {
+		width: 2px;
+	}
+	to {
+		width: 15px;
+	}
+}
+
 
 /**
  *	1、ac代表active(激活),in代表invalid(失效)。这2个状态class不能单独使用，
@@ -438,7 +468,8 @@ a,img{-webkit-touch-callout: none;}
  *	装饰性属性（比如：color, background, opacity, cursor等） 
  *	生成内容的属性（比如：content, list-style, quotes等） 
  *	3、使用BEM命名class
- *	4、sn1,sn2,sn3等用于序号，在结构不好用nth-child(2)等类似表达时使用，不能单独使用。
+ *	4、sn1、sn2、sn3等用于序号，在结构不好用nth-child(2)等类似表达时使用，不能单独使用。
+ *	5、cor1、cor2等用于psd上主要字体颜色，bgc1、bgc2等用于psd上主要背景色。
  */
 
 /**********面向属性的css end**********/
