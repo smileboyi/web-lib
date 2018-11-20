@@ -2,7 +2,7 @@
  * @Author: smileboyi 
  * @Date: 2018-04-10 13:43:31 
  * @Last Modified by: smileboyi
- * @Last Modified time: 2018-11-19 17:34:08
+ * @Last Modified time: 2018-11-20 15:48:47
  */
 
 body,p,form,input,button,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6{margin:0;padding:0;list-style:none;}
@@ -347,14 +347,14 @@ a,img{-webkit-touch-callout: none;}
 	background-size: cover;
 }
 /* 多个，用于雪碧图 */
-.icons1{
+.iconsy{ /* 垂直排列 */
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position-x: 0;
 	background-size: 100% auto;
 }
-.icons2{
+.iconsx{ /* 水平排列 */
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position-y: 0;
 	background-size: auto 100%;
 }
 .contain1{
