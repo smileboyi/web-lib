@@ -20,6 +20,9 @@ export default {
   },
   mounted() {
     let _this = this;
+    // 注销服务
+    Bus.$off("verifyCode");
+    Bus.$off("cancelTimer");
     // 注册服务
     Bus.$on("verifyCode", params => {
       /**
